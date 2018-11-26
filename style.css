@@ -34,7 +34,14 @@ body{
 
 #header{
   height: 60px;
-  background: gray;
+  background: #fff;
+  position:fixed;
+  z-index: 99;
+  width: 100%;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.5);
+  padding-left: 1rem;
 }
 
 #navigation{
@@ -43,5 +50,85 @@ body{
 
 #navigation.show{
   display: block;
+  text-align: center;
+}
+
+#hero{
+  background-image: url(img/intro.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.welcome{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translatex(-50%);
+  color: #fff;
+  text-align: center;
+
+}
+
+.button{
+  padding: 1rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.5);
+
+}
+
+.button-white{
+  color:#374a67;
+  background: #fff;
+  border: 1px solid #374a67;
+}
+
+.card{
+  border-radius: 4px;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.5);
+  width: 100%;
+  text-align: center;
+
+
+
+}
+
+.card img{
+  width: 100%;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+#rezepte{
+  padding: 1rem;
+}
+
+
+.card a{
+  color: #333;
+  text-decoration: none;
+}
+
+.card p{
+  color: #828282;
+
+}
+
+.card p, .card h3{
+  padding: 0 1rem;
+}
+
+.card a.button-blue{
+  color:#fff;
+  background: #374a67;
+  border: 1px solid #374a67;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+#rezepte{
   text-align: center;
 }
