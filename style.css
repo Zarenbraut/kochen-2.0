@@ -132,3 +132,33 @@ body{
 #rezepte{
   text-align: center;
 }
+
+.widget{
+  background-color: #04122b;
+  text-align: center; /* Damit spreche ich text an */
+  color: #fff;
+  padding: 2rem;
+
+}
+h2 span { /* damit spreche ich das Event span an ohne punkt und hashtag */
+  display: block;
+  font-weight: normal;
+}
+
+.newsletter{
+  margin-top: 1rem;
+   /* dünne rote linie mit   outline: 1px solid red;*/
+  font-size: 1rem;
+}
+.email{
+  height: 49px;
+  border-radius: 4px;
+  outline: none;
+  border-color: transparent;
+  padding-left: 1rem;
+  color: #04211b;
+}
+
+.email::placeholder{ /* selecor um die schrift zu ändern regel ist ::;*/
+  color: #04211b;
+}
