@@ -12,6 +12,12 @@ html{
   list-style:none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
 }
 
 body{
@@ -23,6 +29,11 @@ body{
   font-weight: bold;
   text-decoration: none;
   color: #333;
+
+}
+
+#menu li {
+  padding: 1rem; /* oder line -height bei menu a*/
 }
 
 #burger{
@@ -42,15 +53,33 @@ body{
   -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.5);
   box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.5);
   padding-left: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #navigation{
   display:none;
+  opacity: 0;
+  transition: opacity 2s; /*das wäre für die einblendung, funktioniert aber nicht */
 }
+
+
+/* ab background in nav.show alle befehle damit es sich beim drücken des Menüs komplett über den Bildschrim legt ; mit opacity wird es etwas durchsichtig, das Bild drunter ist zu sehen */
 
 #navigation.show{
   display: block;
   text-align: center;
+  background: #fff;
+  width: 100%;
+  height: calc(100vh - 50px);
+  position: absolute;
+  z-index: 1; /* größer als der Body aber kleiner als 99 */
+  margin-top:50px;
+  left:0;
+  top:0;
+  opacity: 1;
+
 }
 
 #hero{
@@ -205,7 +234,37 @@ transition: 2s; /* oder lang von Markus: transition: all 1s 2s ease in  und üne
   padding: 2rem;
 }
 
+@media (min-width: 48em) { /* stylesheet mit styelshhet: wenn du diese größe hast, dann mach dich rot ; nennt sich umbruch */
+  body{
+    background: yellow;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: auto;
+  }
+  .card {
+    width: 48%;
+    margin: 1%;
+  }
+}
 
 #footer-nav li{ /* abstand zwischen impressum . kontankz ;*/
   padding: .4rem;
+}
+
+
+
+@media (min-width: 48em) {   /* oder so lösen:#footer - display flex dann den platz zwichen euch sein -justifiy content: space between dann auf der höhe zentriert- align itdem center - --- dann nächste { } spreche #footer-nav li mit display inline blok --- dann  */
+  #footer-nav ul{
+    display: flex;
+
+  }
+
+
+  #footer{
+    display: flex;
+    justify-content: space-between;
+  }
 }
